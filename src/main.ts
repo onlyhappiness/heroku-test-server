@@ -10,12 +10,12 @@ async function bootstrap() {
   // web socket
   app.useWebSocketAdapter(new IoAdapter(app))
 
-  // const port = process.env.PORT || 5000
+  const port = process.env.PORT || 3000
   await app
-    .listen(3000)
+    .listen(port)
     .then(() => {
       console.log(
-        `✅ Server on http://localhost:${3000}\nstartDate: ${new Date().toISOString()}`,
+        `✅ Server on http://localhost:${port}\nstartDate: ${new Date().toISOString()}`,
       )
     })
     .catch((error) => {
